@@ -4,7 +4,22 @@
 
 1) Cài `arduino-cli` và đảm bảo chạy được lệnh `arduino-cli` trong PowerShell.
 
-2) Chạy build (mặc định board: `esp8266:esp8266:nodemcuv2`):
+- Windows (winget):
+
+```powershell
+winget install ArduinoSA.CLI
+```
+
+Tài liệu: https://arduino.github.io/arduino-cli/latest/installation/
+
+Nếu bạn chưa muốn cài hệ thống, script build có thể tự tải `arduino-cli.exe` về thư mục `.arduino/arduino-cli/`.
+Lúc đó bạn không gõ được `arduino-cli version` trực tiếp, nhưng có thể chạy:
+
+```powershell
+.\.arduino\arduino-cli\arduino-cli.exe version
+```
+
+2) Chạy build (mặc định board NodeMCU 1.0: `esp8266:esp8266:nodemcuv2`):
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\tools\build.ps1
